@@ -50,6 +50,8 @@ echo "[INFO ] Tunneling ${SSH_BIND_IP:=127.0.0.1}:${SSH_TUNNEL_PORT:=${DEFAULT_P
 COMMAND="autossh "\
 "-M 0 "\
 "-N "\
+"-C "\
+"-T "\
 "-o StrictHostKeyChecking=${STRICT_HOSTS_KEY_CHECKING} ${KNOWN_HOSTS_ARG:=}"\
 "-o ServerAliveInterval=${SSH_SERVER_ALIVE_INTERVAL:-10} "\
 "-o ServerAliveCountMax=${SSH_SERVER_ALIVE_COUNT_MAX:-3} "\
